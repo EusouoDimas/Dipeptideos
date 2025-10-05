@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dipeptídeos — Produtos e Pesquisas</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Dipeptídeos — laboratório e comércio nacional de peptídeos"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">D<span class="logo-sq">²</span></div>
+        <div class="brand-text">
+          <h1>Dipeptídeos</h1>
+          <small>Qualidade e acesso — peptídeos produzidos no Brasil</small>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Principal">
+        <button class="nav-btn" data-route="home">Home</button>
+        <button class="nav-btn" data-route="shop">Loja</button>
+        <button class="nav-btn" data-route="about">Empresa</button>
+        <button class="nav-btn" data-route="contact">Contato</button>
+        <button class="cta" id="account-btn">Entrar</button>
+        <button class="cart-btn" id="cart-btn" aria-label="Abrir carrinho">
+          🛒 <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </nav>
+
+      <button class="mobile-menu" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container main-content">
+
+    <!-- HOME -->
+    <section id="home" class="route active">
+      <div class="home-grid">
+        <div class="hero-left">
+          <h2>Dipeptídeos — <span class="accent">qualidade</span> e acesso</h2>
+          <p class="lead">Produção nacional de peptídeos com foco em controle de qualidade, logística eficiente e suporte técnico. Nosso objetivo é ampliar disponibilidade e reduzir custos para centros de pesquisa e profissionais.</p>
+
+          <div class="hero-actions">
+            <button class="big-btn" data-route="shop">Ver produtos</button>
+            <button class="ghost-btn" data-route="about">Saiba mais</button>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-title">Origem</div>
+              <div class="stat-value">Produção nacional</div>
+            </div>
+            <div class="stat">
+              <div class="stat-title">Padrão</div>
+              <div class="stat-value">Controle analítico</div>
+            </div>
+            <div class="stat">
+              <div class="stat-title">Serviço</div>
+              <div class="stat-value">Entrega e suporte</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <img src="https://source.unsplash.com/1400x900/?vial,ampoule" alt="Lançamento nacional" loading="lazy" onerror="this.src='https://via.placeholder.com/1400x900.png?text=Dipeptídeos'">
+            <div class="hero-overlay">
+              <h4>Lançamento Nacional</h4>
+              <p>Capacidade de produção local para reduzir prazos e ampliar disponibilidade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section id="shop" class="route">
+      <div class="shop-header">
+        <h2>Loja — Produtos</h2>
+        <div class="shop-controls">
+          <input id="search" type="search" placeholder="Buscar produto ou categoria" aria-label="Buscar produto">
+        </div>
+      </div>
+
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- PRODUCT DETAIL -->
+    <section id="product" class="route">
+      <button class="back-btn" data-route="shop">← Voltar à loja</button>
+
+      <div class="product-wrap">
+        <div class="product-main">
+          <div class="product-image">
+            <img id="prod-img" src="" alt="" loading="lazy" onerror="this.src='https://via.placeholder.com/1200x800.png?text=Dipept%C3%ADdeos'">
+          </div>
+
+          <div class="product-details card">
+            <h2 id="prod-name">—</h2>
+            <p id="prod-category" class="muted"></p>
+
+            <div id="prod-long" class="long-desc"></div>
+            <div id="prod-specs" class="features"></div>
+            <div id="prod-cert" class="muted small" style="margin-top:12px"></div>
+          </div>
+        </div>
+
+        <aside class="product-aside card" id="price-aside" style="display:none">
+          <div class="price-block">
+            <div class="muted">Preço de tabela</div>
+            <div id="price-previous" class="line-through muted">R$ --</div>
+            <div id="price-current" class="big-price">R$ --</div>
+            <div id="price-save" class="save">Economize R$ --</div>
+          </div>
+
+          <button class="buy-btn" id="buy-button">Comprar</button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="route">
+      <h2>Sobre a Dipeptídeos</h2>
+      <p class="muted">Dipeptídeos é um laboratório nacional dedicado à pesquisa, desenvolvimento e fabricação de peptídeos. Priorizamos controle analítico na produção, armazenamento adequado e suporte técnico para centros de pesquisa, laboratórios e profissionais da saúde. Nossos lotes acompanham certificado de análise (CoA) e rastreabilidade completa.</p>
+
+      <div class="about-grid">
+        <div class="card about-left">
+          <h3>Missão</h3>
+          <p>Fornecer peptídeos com rastreabilidade, informação técnica e suporte para pesquisadores e profissionais da saúde, mantendo padrões de qualidade e segurança.</p>
+
+          <h3>Visão</h3>
+          <p>Aumentar o acesso à biotecnologia por meio de produção local, investindo em infraestrutura analítica e parcerias científicas.</p>
+
+          <h3>Valores</h3>
+          <ul>
+            <li>Transparência nos processos e resultados analíticos</li>
+            <li>Compromisso com segurança e boas práticas laboratoriais</li>
+            <li>Suporte técnico e educação continuada para usuários</li>
+          </ul>
+        </div>
+
+        <div class="card about-right">
+          <h3>Equipe Técnica</h3>
+          <p>Nossa equipe reúne bioquímicos, farmacêuticos e técnicos de controle de qualidade com experiência em síntese peptídica, HPLC, espectrometria e validação de processos.</p>
+
+          <h3>Acreditações & Certificados</h3>
+          <ul>
+            <li>Relatórios de pureza por HPLC (por lote)</li>
+            <li>Testes de endotoxina e estabilidade</li>
+            <li>Procedimentos de armazenamento refrigerado (cadeia de frio)</li>
+          </ul>
+
+          <h3>Infraestrutura</h3>
+          <p>Laboratório equipado com sistemas de síntese, cromatografia preparativa e envase em ambiente controlado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="route">
+      <h2>Fale conosco</h2>
+      <p class="muted">Para pedidos institucionais, cotações e suporte técnico, entre em contato. Nossa equipe responde preferencialmente por e-mail em horário comercial.</p>
+
+      <form class="contact-form" onsubmit="return false;">
+        <input placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mensagem" rows="5"></textarea>
+        <div class="form-actions">
+          <button class="big-btn">Enviar</button>
+          <button type="reset" class="ghost-btn">Limpar</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <h3>Dipeptídeos</h3>
+        <p class="muted">Equipe técnica dedicada à pesquisa, desenvolvimento e atendimento a instituições científicas e clínicas.</p>
+
+        <div class="contact-block">
+          <div><strong>E-mail:</strong> contato@dipeptides.local</div>
+          <div><strong>Telefone:</strong> +55 (11) 9 9999-9999</div>
+          <div><strong>Endereço:</strong> Avenida Exemplo, 123 — São Paulo, SP</div>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><button class="link-like nav-btn" data-route="about">Sobre nós</button></li>
+            <li><button id="jobs-link" class="link-like">Trabalhe conosco</button></li>
+            <li><button id="privacy-link" class="link-like">Política de Privacidade</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <ul>
+            <li><button id="tech-support" class="link-like">Suporte Técnico</button></li>
+            <li><button id="institutional" class="link-like">Cotações Institucionais</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Seu Carrinho</h3>
+      <button id="close-cart" aria-label="Fechar carrinho">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <strong id="cart-total">R$ 0,00</strong></div>
+      <div class="cart-actions">
+        <button id="clear-cart" class="small-muted">Limpar</button>
+        <button id="checkout" class="big-btn">Finalizar compra</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
